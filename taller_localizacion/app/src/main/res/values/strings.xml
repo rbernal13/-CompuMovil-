@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Taller2</string>
+    <string name="UploadImage">Cargar foto</string>
+    <string name="Capture">Tomar foto</string>
+</resources>
