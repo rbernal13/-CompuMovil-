@@ -77,12 +77,12 @@ public class Camara extends AppCompatActivity {
         switch (requestCode){
             case MY_PERMISSIONS_REQUEST_IMAGE_PICKER:
                 if(grantResults.length > 0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
-                    tomarFoto();
+                    seleccionarGaleria();
                 }
 
             case MY_PERMISSIONS_REQUEST_CAMERA:
                 if (grantResults.length > 0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
-                  seleccionarGaleria();
+                  tomarFoto();
                 }
 
         }
