@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Taller2</string>
+    <string name="app_name">PermissionLocationMaps</string>
     <string name="UploadImage">Cargar foto</string>
     <string name="Capture">Tomar foto</string>
+    <string name="Save">Guardar</string>
+    <string name="Historial">Ubicaciones Guardadas</string>
 </resources>

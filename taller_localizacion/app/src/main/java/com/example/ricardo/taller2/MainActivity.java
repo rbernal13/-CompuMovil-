@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton imgbtnContactos;
     ImageButton imgbtnCamara;
-    Button btnLocalicacion;
+    ImageButton imgbtnLocalicacion;
 
 
     @Override
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imgbtnCamara = (ImageButton) findViewById(R.id.ibtnCamara);
         imgbtnContactos = (ImageButton) findViewById(R.id.ibtnContactos);
-        btnLocalicacion = (Button)findViewById(R.id.btnLocation);
+        imgbtnLocalicacion = (ImageButton)findViewById(R.id.ibtnLocalizacion);
 
         imgbtnContactos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        btnLocalicacion.setOnClickListener(new View.OnClickListener() {
+
+        imgbtnLocalicacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), LocationActivity.class);
