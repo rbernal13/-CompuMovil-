@@ -42,13 +42,16 @@ public class Camara extends AppCompatActivity {
         buttonGaleria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pedirPermisoGaleria();
+
 
                 int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE);
 
                 if(permissionCheck == 0){
                    seleccionarGaleria();
+                } else{
+                    pedirPermisoGaleria();
                 }
+
 
 
             }

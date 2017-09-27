@@ -36,13 +36,15 @@ public class Contactos extends AppCompatActivity {
         mCursorAdapter = new ContactsCursor(this, null, 0);
         list.setAdapter(mCursorAdapter);
 
-        pedirPermisoContactos();
+
 
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS);
 
         if(permissionCheck == 0){
             mContactsCursor = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI,mProjection, null, null, null);
             mCursorAdapter.changeCursor(mContactsCursor);
+        } else{
+            pedirPermisoContactos();
         }
     }
 
