@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TallerFirebaseMaps</string>
+    <string name="email">Email (example@email.com)</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign up</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="tomarfoto">Tomar foto</string>
+    <string name="seleccionargaleria">Seleccionar galeria</string>
+</resources>
