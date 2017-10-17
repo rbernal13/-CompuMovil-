@@ -8,4 +8,6 @@
     <string name="apellido">Apellido</string>
     <string name="tomarfoto">Tomar foto</string>
     <string name="seleccionargaleria">Seleccionar galeria</string>
+    <string name="title_activity_home">Map</string>
+    <string name="txtEmail">Email: </string>
 </resources>
