@@ -29,6 +29,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -44,6 +45,7 @@ public class SignupActivity extends AppCompatActivity {
 
     private EditText editNombre, editApellido, editPassword, editEmail;
     private FirebaseAuth mAuth;
+    private DatabaseReference databaseRef;
     private ProgressDialog mProgressDialog;
     private StorageReference mStorageRef;
     private Uri profileUri = null;
@@ -121,7 +123,7 @@ public class SignupActivity extends AppCompatActivity {
             editEmail.setError("Campo requerido.");
             valid	=	false;
         }else{
-            if(!email.contains("@") || !email.contains(".") || email.length() < 5){
+            if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     valid	=	false;
                     editEmail.setError("Formato incorrecto.");
             }else{
@@ -174,9 +176,7 @@ public class SignupActivity extends AppCompatActivity {
                         upcrb = new UserProfileChangeRequest.Builder();
                         upcrb.setDisplayName(editNombre.getText().toString()+" "+editApellido.getText().toString());
                         if (profileUri != null){
-                            mProgressDialog.setTitle("Subiendo....");
-                            mProgressDialog.setMessage("Cargando foto");
-                            mProgressDialog.setCancelable(false);
+                            mProgressDialog.setMessage("Registrando informacion.....");
                             mProgressDialog.show();
                             final Uri file = profileUri;
                             upcrb.setPhotoUri(file);

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuLogOut"
+        android:title="Cerrar Sesión"	/>
+    <item
+        android:id="@+id/menuSettings"
+        android:title="Configuración"	/>
+    <item
+        android:id="@+id/menuTime"
+        android:title="Modo nocturno"	/>
+</menu>
