@@ -221,6 +221,8 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
         buttonVolverLst.setVisibility(View.GONE);
         buttonIniciarRecorrido.setVisibility(View.GONE);
         buttonCancelar.setVisibility(View.GONE);
+        buttonAvanzado.setVisibility(View.GONE);
+
 
         buttonAvanzado.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -672,7 +674,7 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
                 e.printStackTrace();
             }
         } else {
-            Toast.makeText(HomeActivity.this, "La dirección esta vacía", Toast.LENGTH_SHORT).show();
+            Toast.makeText(HomeActivity.this, "Null, campo vacio", Toast.LENGTH_SHORT).show();
             destinoAzul.setVisible(false);
             pDestino = null;
             nDestino = null;
